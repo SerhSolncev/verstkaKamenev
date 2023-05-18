@@ -1,0 +1,845 @@
+<!--подключаем основу для страницы и выводим в нее данные--><!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="utf-8">
+  <title>verstka Kamenev</title>
+  <meta name="description" content="verstka Kamenev">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="content/css/vendors.css" rel="stylesheet">
+  <link href="content/css/app.css" rel="stylesheet">
+</head>
+<body class="main">
+<header class="header">
+  <div class="container">
+    <div class="header__body"><a class="logo logo--header">
+      <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M92.25 77.736C91.866 76.106 91.288 74.5 90.412 73.044C88.67 70.112 86.014 67.874 83.224 66.066C80.406 64.264 77.392 62.818 74.308 61.628C68.402 59.346 68.688 59.422 64.702 58C55.87 54.852 50.966 50.172 50.658 45.096C50.51 42.638 52.91 34.628 62.806 36.532C65.156 36.984 67.38 37.618 69.57 38.606C71.588 39.518 77.478 42.374 79.542 46.44C79.698 48.234 80.33 48.928 82.854 50.12C84.752 51.016 86.668 51.99 86.84 54.198C86.85 54.318 86.942 54.416 87.102 54.44C87.206 54.44 87.302 54.378 87.344 54.278C87.708 53.4 89.174 52.3 90.266 52.6C90.392 52.632 90.504 52.582 90.562 52.478C90.622 52.374 90.602 52.246 90.52 52.162L88.794 50.454C88.172 49.834 87.492 49.012 86.916 47.956C86.76 47.672 86.626 47.392 86.508 47.122C86.432 46.934 86.356 46.748 86.28 46.56C84.832 42.77 82.134 38.71 79.35 36.08C77.838 34.626 76.174 33.346 74.4 32.254C72.618 31.178 70.762 30.222 68.734 29.65L68.586 30.162C70.48 30.816 72.252 31.86 73.91 33C75.566 34.158 77.096 35.486 78.456 36.958C80.398 39.022 81.928 41.418 83.02 43.982L79.034 39.028L79.144 40.744L75.878 37.062L76.08 38.786L72.908 36.228L73.18 37.396C72.466 36.924 66.13 34.404 62.968 33.216C59.806 32.028 53.558 26.168 55.36 18.752C55.36 18.752 52.406 17.604 50.29 16.822C48.204 16.07 46.11 15.388 44.01 14.73C39.81 13.414 35.586 12.214 31.34 11.094C27.094 9.98005 22.82 8.97005 18.522 8.07805C14.222 7.19605 9.89802 6.41005 5.52202 5.97205L5.44402 6.63805C9.75002 7.30005 14 8.30405 18.218 9.40205C22.434 10.512 26.622 11.734 30.776 13.06C34.928 14.39 39.054 15.8 43.13 17.316C45.166 18.074 47.196 18.854 49.184 19.692C49.606 19.868 50.036 20.052 50.466 20.236C48.018 19.754 45.57 19.372 43.12 19.054C38.698 18.492 34.272 18.138 29.842 17.938C25.414 17.738 20.982 17.706 16.558 17.87C12.136 18.042 7.71202 18.388 3.34802 19.136L3.43402 19.744C7.79402 19.296 12.184 19.252 16.56 19.378C20.938 19.512 25.308 19.84 29.654 20.332C33.998 20.824 38.324 21.466 42.592 22.304C45.224 22.826 47.84 23.432 50.398 24.146C48.376 23.944 46.364 23.892 44.37 23.916C40.416 23.976 36.518 24.41 32.674 25.064C28.83 25.724 25.038 26.61 21.324 27.756C17.622 28.914 13.962 30.29 10.602 32.254L10.834 32.67C14.274 31.014 17.97 29.954 21.686 29.112C25.41 28.284 29.188 27.716 32.974 27.376C36.756 27.04 40.558 26.928 44.3 27.174C47.628 27.394 50.934 27.9 53.96 28.872C54.09 29.762 54.692 31.564 54.982 32.464C46.472 36.378 45.394 43.418 46.09 47.194C46.908 51.622 50.112 54.998 53.898 57.184C57.032 58.966 60.234 60.102 63.35 61.278C66.46 62.444 69.54 63.564 72.284 65.114C74.988 66.608 77.236 68.916 79.066 71.534C82.74 76.81 84.21 83.462 84.65 90.024L85.38 90.004C85.396 83.358 84.44 76.4 80.876 70.38C79.7 68.408 78.248 66.538 76.534 64.914C78.518 65.682 80.456 66.55 82.308 67.58C85.054 69.138 87.642 71.078 89.404 73.682C90.292 74.976 90.914 76.432 91.37 77.948C91.774 79.482 91.96 81.078 92.028 82.69H92.652C92.674 81.044 92.582 79.38 92.25 77.736Z"></path>
+      </svg>
+    </a>
+      <nav class="header__nav"><a class="link link--simple-white is-current" href="#">
+        <div class="link__text">Home</div>
+      </a><a class="link link--simple-white" href="#">
+        <div class="link__text">Despre noi</div>
+      </a><a class="link link--simple-white" href="#">
+        <div class="link__text">Produse</div>
+      </a><a class="link link--simple-white" href="#">
+        <div class="link__text">Noutati</div>
+      </a><a class="link link--simple-white" href="#">
+        <div class="link__text">Contacte</div>
+      </a></nav>
+      <div class="header__buttons">
+        <button class="button button--icon">
+          <div class="button__icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M9.16669 3.33329C5.94503 3.33329 3.33335 5.94496 3.33335 9.16663C3.33335 12.3883 5.94503 15 9.16669 15C12.3883 15 15 12.3883 15 9.16663C15 5.94496 12.3883 3.33329 9.16669 3.33329ZM1.66669 9.16663C1.66669 5.02449 5.02455 1.66663 9.16669 1.66663C13.3088 1.66663 16.6667 5.02449 16.6667 9.16663C16.6667 13.3088 13.3088 16.6666 9.16669 16.6666C5.02455 16.6666 1.66669 13.3088 1.66669 9.16663Z"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.2858 13.2857C13.6112 12.9603 14.1388 12.9603 14.4643 13.2857L18.0893 16.9107C18.4147 17.2361 18.4147 17.7638 18.0893 18.0892C17.7638 18.4147 17.2362 18.4147 16.9108 18.0892L13.2858 14.4642C12.9603 14.1388 12.9603 13.6111 13.2858 13.2857Z"></path>
+            </svg>
+          </div>
+        </button>
+        <button class="button button--icon">
+          <div class="button__icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.33335 1.16671C4.49073 0.956869 4.73772 0.833374 5.00002 0.833374H15C15.2623 0.833374 15.5093 0.956869 15.6667 1.16671L18.1667 4.50004C18.2749 4.64429 18.3334 4.81973 18.3334 5.00004V16.6667C18.3334 17.3297 18.07 17.9656 17.6011 18.4345C17.1323 18.9033 16.4964 19.1667 15.8334 19.1667H4.16669C3.50365 19.1667 2.86776 18.9033 2.39892 18.4345C1.93008 17.9656 1.66669 17.3297 1.66669 16.6667V5.00004C1.66669 4.81973 1.72517 4.64429 1.83335 4.50004L4.33335 1.16671ZM5.41669 2.50004L3.33335 5.27782V16.6667C3.33335 16.8877 3.42115 17.0997 3.57743 17.256C3.73371 17.4122 3.94567 17.5 4.16669 17.5H15.8334C16.0544 17.5 16.2663 17.4122 16.4226 17.256C16.5789 17.0997 16.6667 16.8877 16.6667 16.6667V5.27782L14.5834 2.50004H5.41669Z"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.66669 4.99996C1.66669 4.53972 2.03978 4.16663 2.50002 4.16663H17.5C17.9603 4.16663 18.3334 4.53972 18.3334 4.99996C18.3334 5.4602 17.9603 5.83329 17.5 5.83329H2.50002C2.03978 5.83329 1.66669 5.4602 1.66669 4.99996Z"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6.66665 7.5C7.12688 7.5 7.49998 7.8731 7.49998 8.33333C7.49998 8.99637 7.76337 9.63226 8.23221 10.1011C8.70105 10.5699 9.33694 10.8333 9.99998 10.8333C10.663 10.8333 11.2989 10.5699 11.7677 10.1011C12.2366 9.63226 12.5 8.99637 12.5 8.33333C12.5 7.8731 12.8731 7.5 13.3333 7.5C13.7936 7.5 14.1666 7.8731 14.1666 8.33333C14.1666 9.4384 13.7277 10.4982 12.9463 11.2796C12.1649 12.061 11.105 12.5 9.99998 12.5C8.89491 12.5 7.8351 12.061 7.0537 11.2796C6.2723 10.4982 5.83331 9.4384 5.83331 8.33333C5.83331 7.8731 6.20641 7.5 6.66665 7.5Z"></path>
+            </svg>
+          </div>
+        </button>
+        <button class="button button--icon js-open-menu">
+          <div class="button__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+              <path
+                d="M 3 8 A 2.0002 2.0002 0 1 0 3 12 L 47 12 A 2.0002 2.0002 0 1 0 47 8 L 3 8 z M 3 23 A 2.0002 2.0002 0 1 0 3 27 L 47 27 A 2.0002 2.0002 0 1 0 47 23 L 3 23 z M 3 38 A 2.0002 2.0002 0 1 0 3 42 L 47 42 A 2.0002 2.0002 0 1 0 47 38 L 3 38 z"></path>
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu">
+  <button class="mobile-menu__close js-close-menu"><img src="content/images/icons/close.png" width="20" height="20">
+  </button>
+  <div class="mobile-menu__list"><a class="link link--simple-white is-current" href="#">
+    <div class="link__text">Home</div>
+  </a><a class="link link--simple-white" href="#">
+    <div class="link__text">Despre noi</div>
+  </a><a class="link link--simple-white" href="#">
+    <div class="link__text">Produse</div>
+  </a><a class="link link--simple-white" href="#">
+    <div class="link__text">Noutati</div>
+  </a><a class="link link--simple-white" href="#">
+    <div class="link__text">Contacte</div>
+  </a></div>
+</div>
+<section class="section section--top" style="background-image: url('content/images/pics/top-bg.png')">
+  <div class="container">
+    <div class="top-slider js-dmi" data-slider="shop">
+      <div class="top-slider__nav">
+        <div class="swiper-button js-next">
+          <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6.91076 4.41073C7.2362 4.0853 7.76384 4.0853 8.08928 4.41073L13.0893 9.41073C13.4147 9.73617 13.4147 10.2638 13.0893 10.5892L8.08928 15.5892C7.76384 15.9147 7.2362 15.9147 6.91076 15.5892C6.58533 15.2638 6.58533 14.7362 6.91076 14.4107L11.3215 9.99999L6.91076 5.58925C6.58533 5.26381 6.58533 4.73617 6.91076 4.41073Z"></path>
+          </svg>
+        </div>
+        <div class="swiper-button js-prev">
+          <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6.91076 4.41073C7.2362 4.0853 7.76384 4.0853 8.08928 4.41073L13.0893 9.41073C13.4147 9.73617 13.4147 10.2638 13.0893 10.5892L8.08928 15.5892C7.76384 15.9147 7.2362 15.9147 6.91076 15.5892C6.58533 15.2638 6.58533 14.7362 6.91076 14.4107L11.3215 9.99999L6.91076 5.58925C6.58533 5.26381 6.58533 4.73617 6.91076 4.41073Z"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="top-slider__pagination">
+        <div class="top-slider__count js-swiper-current">01</div>
+        <div class="swiper-pagination"></div>
+        <div class="top-slider__count js-swiper-total"></div>
+      </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="shop-slide">
+              <div class="shop-slide__left">
+                <div class="shop-slide__title">Online Magazin</div>
+                <h2 class="title title--big">de produse electronice</h2>
+                <div class="label label--big">
+                  <div class="label__icon"><img src="content/images/icons/map-pin.svg" width="20" height="20"></div>
+                  <div class="label__title">în Moldova</div>
+                </div>
+              </div>
+              <div class="shop-slide__right">
+                <div class="shop-slide__img-wrap">
+                  <div class="shop-slide__back"><img class="swiper-lazy" src="content/images/pics/slide-bg.png"
+                                                     width="812" height="761"></div>
+                  <div class="shop-slide__img"><img class="swiper-lazy" src="content/images/pics/device1.png"
+                                                    width="167" height="342"></div>
+                </div>
+                <div class="shop-slide__board">
+                  <div class="shop-slide__name">Apple iPhone 12 Mini</div>
+                  <div class="shop-slide__table">
+                    <div class="shop-slide__table-item"><span>Display</span><span>6.1" OLED</span></div>
+                    <div class="shop-slide__table-item"><span>Refresh rate</span><span>120 Hz</span></div>
+                    <div class="shop-slide__table-item"><span>Memorie internă</span><span>128 GB</span></div>
+                    <div class="shop-slide__table-item"><span>RAM</span><span>6 GB</span></div>
+                  </div>
+                  <div class="shop-slide__buttons">
+                    <button class="button button--blue">
+                      <div class="button__icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.33335 1.16671C4.49073 0.956869 4.73772 0.833374 5.00002 0.833374H15C15.2623 0.833374 15.5093 0.956869 15.6667 1.16671L18.1667 4.50004C18.2749 4.64429 18.3334 4.81973 18.3334 5.00004V16.6667C18.3334 17.3297 18.07 17.9656 17.6011 18.4345C17.1323 18.9033 16.4964 19.1667 15.8334 19.1667H4.16669C3.50365 19.1667 2.86776 18.9033 2.39892 18.4345C1.93008 17.9656 1.66669 17.3297 1.66669 16.6667V5.00004C1.66669 4.81973 1.72517 4.64429 1.83335 4.50004L4.33335 1.16671ZM5.41669 2.50004L3.33335 5.27782V16.6667C3.33335 16.8877 3.42115 17.0997 3.57743 17.256C3.73371 17.4122 3.94567 17.5 4.16669 17.5H15.8334C16.0544 17.5 16.2663 17.4122 16.4226 17.256C16.5789 17.0997 16.6667 16.8877 16.6667 16.6667V5.27782L14.5834 2.50004H5.41669Z"></path>
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.66669 4.99996C1.66669 4.53972 2.03978 4.16663 2.50002 4.16663H17.5C17.9603 4.16663 18.3334 4.53972 18.3334 4.99996C18.3334 5.4602 17.9603 5.83329 17.5 5.83329H2.50002C2.03978 5.83329 1.66669 5.4602 1.66669 4.99996Z"></path>
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6.66665 7.5C7.12688 7.5 7.49998 7.8731 7.49998 8.33333C7.49998 8.99637 7.76337 9.63226 8.23221 10.1011C8.70105 10.5699 9.33694 10.8333 9.99998 10.8333C10.663 10.8333 11.2989 10.5699 11.7677 10.1011C12.2366 9.63226 12.5 8.99637 12.5 8.33333C12.5 7.8731 12.8731 7.5 13.3333 7.5C13.7936 7.5 14.1666 7.8731 14.1666 8.33333C14.1666 9.4384 13.7277 10.4982 12.9463 11.2796C12.1649 12.061 11.105 12.5 9.99998 12.5C8.89491 12.5 7.8351 12.061 7.0537 11.2796C6.2723 10.4982 5.83331 9.4384 5.83331 8.33333C5.83331 7.8731 6.20641 7.5 6.66665 7.5Z"></path>
+                        </svg>
+                      </div>
+                      <div class="button__text">Cumpără acum</div>
+                    </button>
+                    <a class="button button--empty" href="#">
+                      <div class="button__text">Află mai multe</div>
+                      <div class="button__icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.33334 10C3.33334 9.53978 3.70644 9.16669 4.16668 9.16669H15.8333C16.2936 9.16669 16.6667 9.53978 16.6667 10C16.6667 10.4603 16.2936 10.8334 15.8333 10.8334H4.16668C3.70644 10.8334 3.33334 10.4603 3.33334 10Z"></path>
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M9.41073 3.57739C9.73617 3.25195 10.2638 3.25195 10.5892 3.57739L16.4226 9.41072C16.748 9.73616 16.748 10.2638 16.4226 10.5892L10.5892 16.4226C10.2638 16.748 9.73617 16.748 9.41073 16.4226C9.0853 16.0971 9.0853 15.5695 9.41073 15.2441L14.6548 9.99998L9.41073 4.7559C9.0853 4.43047 9.0853 3.90283 9.41073 3.57739Z"></path>
+                        </svg>
+                      </div>
+                    </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="shop-slide">
+              <div class="shop-slide__left">
+                <div class="shop-slide__title">Online Magazin</div>
+                <h2 class="title title--big">de produse electronice</h2>
+                <div class="label label--big">
+                  <div class="label__icon"><img src="content/images/icons/map-pin.svg" width="20" height="20"></div>
+                  <div class="label__title">în Moldova</div>
+                </div>
+              </div>
+              <div class="shop-slide__right">
+                <div class="shop-slide__img-wrap">
+                  <div class="shop-slide__back"><img class="swiper-lazy" src="content/images/pics/slide-bg.png"
+                                                     width="812" height="761"></div>
+                  <div class="shop-slide__img"><img class="swiper-lazy" src="content/images/pics/device2.png"
+                                                    width="167" height="342"></div>
+                </div>
+                <div class="shop-slide__board">
+                  <div class="shop-slide__name">Google Pixel 4A</div>
+                  <div class="shop-slide__table">
+                    <div class="shop-slide__table-item"><span>Display</span><span>5.1" OLED</span></div>
+                    <div class="shop-slide__table-item"><span>Refresh rate</span><span>120 Hz</span></div>
+                    <div class="shop-slide__table-item"><span>Memorie internă</span><span>256 GB</span></div>
+                    <div class="shop-slide__table-item"><span>RAM</span><span>4 GB</span></div>
+                  </div>
+                  <div class="shop-slide__buttons">
+                    <button class="button button--blue">
+                      <div class="button__icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.33335 1.16671C4.49073 0.956869 4.73772 0.833374 5.00002 0.833374H15C15.2623 0.833374 15.5093 0.956869 15.6667 1.16671L18.1667 4.50004C18.2749 4.64429 18.3334 4.81973 18.3334 5.00004V16.6667C18.3334 17.3297 18.07 17.9656 17.6011 18.4345C17.1323 18.9033 16.4964 19.1667 15.8334 19.1667H4.16669C3.50365 19.1667 2.86776 18.9033 2.39892 18.4345C1.93008 17.9656 1.66669 17.3297 1.66669 16.6667V5.00004C1.66669 4.81973 1.72517 4.64429 1.83335 4.50004L4.33335 1.16671ZM5.41669 2.50004L3.33335 5.27782V16.6667C3.33335 16.8877 3.42115 17.0997 3.57743 17.256C3.73371 17.4122 3.94567 17.5 4.16669 17.5H15.8334C16.0544 17.5 16.2663 17.4122 16.4226 17.256C16.5789 17.0997 16.6667 16.8877 16.6667 16.6667V5.27782L14.5834 2.50004H5.41669Z"></path>
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.66669 4.99996C1.66669 4.53972 2.03978 4.16663 2.50002 4.16663H17.5C17.9603 4.16663 18.3334 4.53972 18.3334 4.99996C18.3334 5.4602 17.9603 5.83329 17.5 5.83329H2.50002C2.03978 5.83329 1.66669 5.4602 1.66669 4.99996Z"></path>
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6.66665 7.5C7.12688 7.5 7.49998 7.8731 7.49998 8.33333C7.49998 8.99637 7.76337 9.63226 8.23221 10.1011C8.70105 10.5699 9.33694 10.8333 9.99998 10.8333C10.663 10.8333 11.2989 10.5699 11.7677 10.1011C12.2366 9.63226 12.5 8.99637 12.5 8.33333C12.5 7.8731 12.8731 7.5 13.3333 7.5C13.7936 7.5 14.1666 7.8731 14.1666 8.33333C14.1666 9.4384 13.7277 10.4982 12.9463 11.2796C12.1649 12.061 11.105 12.5 9.99998 12.5C8.89491 12.5 7.8351 12.061 7.0537 11.2796C6.2723 10.4982 5.83331 9.4384 5.83331 8.33333C5.83331 7.8731 6.20641 7.5 6.66665 7.5Z"></path>
+                        </svg>
+                      </div>
+                      <div class="button__text">Cumpără acum</div>
+                    </button>
+                    <a class="button button--empty" href="#">
+                      <div class="button__text">Află mai multe</div>
+                      <div class="button__icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.33334 10C3.33334 9.53978 3.70644 9.16669 4.16668 9.16669H15.8333C16.2936 9.16669 16.6667 9.53978 16.6667 10C16.6667 10.4603 16.2936 10.8334 15.8333 10.8334H4.16668C3.70644 10.8334 3.33334 10.4603 3.33334 10Z"></path>
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M9.41073 3.57739C9.73617 3.25195 10.2638 3.25195 10.5892 3.57739L16.4226 9.41072C16.748 9.73616 16.748 10.2638 16.4226 10.5892L10.5892 16.4226C10.2638 16.748 9.73617 16.748 9.41073 16.4226C9.0853 16.0971 9.0853 15.5695 9.41073 15.2441L14.6548 9.99998L9.41073 4.7559C9.0853 4.43047 9.0853 3.90283 9.41073 3.57739Z"></path>
+                        </svg>
+                      </div>
+                    </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="shop-slide">
+              <div class="shop-slide__left">
+                <div class="shop-slide__title">Online Magazin</div>
+                <h2 class="title title--big">de produse electronice</h2>
+                <div class="label label--big">
+                  <div class="label__icon"><img src="content/images/icons/map-pin.svg" width="20" height="20"></div>
+                  <div class="label__title">în Moldova</div>
+                </div>
+              </div>
+              <div class="shop-slide__right">
+                <div class="shop-slide__img-wrap">
+                  <div class="shop-slide__back"><img class="swiper-lazy" src="content/images/pics/slide-bg.png"
+                                                     width="812" height="761"></div>
+                  <div class="shop-slide__img"><img class="swiper-lazy" src="content/images/pics/device3.png"
+                                                    width="167" height="342"></div>
+                </div>
+                <div class="shop-slide__board">
+                  <div class="shop-slide__name">OnePlus 8 Pro</div>
+                  <div class="shop-slide__table">
+                    <div class="shop-slide__table-item"><span>Display</span><span>5.5" OLED</span></div>
+                    <div class="shop-slide__table-item"><span>Refresh rate</span><span>144 Hz</span></div>
+                    <div class="shop-slide__table-item"><span>Memorie internă</span><span>128 GB</span></div>
+                    <div class="shop-slide__table-item"><span>RAM</span><span>8 GB</span></div>
+                  </div>
+                  <div class="shop-slide__buttons">
+                    <button class="button button--blue">
+                      <div class="button__icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.33335 1.16671C4.49073 0.956869 4.73772 0.833374 5.00002 0.833374H15C15.2623 0.833374 15.5093 0.956869 15.6667 1.16671L18.1667 4.50004C18.2749 4.64429 18.3334 4.81973 18.3334 5.00004V16.6667C18.3334 17.3297 18.07 17.9656 17.6011 18.4345C17.1323 18.9033 16.4964 19.1667 15.8334 19.1667H4.16669C3.50365 19.1667 2.86776 18.9033 2.39892 18.4345C1.93008 17.9656 1.66669 17.3297 1.66669 16.6667V5.00004C1.66669 4.81973 1.72517 4.64429 1.83335 4.50004L4.33335 1.16671ZM5.41669 2.50004L3.33335 5.27782V16.6667C3.33335 16.8877 3.42115 17.0997 3.57743 17.256C3.73371 17.4122 3.94567 17.5 4.16669 17.5H15.8334C16.0544 17.5 16.2663 17.4122 16.4226 17.256C16.5789 17.0997 16.6667 16.8877 16.6667 16.6667V5.27782L14.5834 2.50004H5.41669Z"></path>
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.66669 4.99996C1.66669 4.53972 2.03978 4.16663 2.50002 4.16663H17.5C17.9603 4.16663 18.3334 4.53972 18.3334 4.99996C18.3334 5.4602 17.9603 5.83329 17.5 5.83329H2.50002C2.03978 5.83329 1.66669 5.4602 1.66669 4.99996Z"></path>
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6.66665 7.5C7.12688 7.5 7.49998 7.8731 7.49998 8.33333C7.49998 8.99637 7.76337 9.63226 8.23221 10.1011C8.70105 10.5699 9.33694 10.8333 9.99998 10.8333C10.663 10.8333 11.2989 10.5699 11.7677 10.1011C12.2366 9.63226 12.5 8.99637 12.5 8.33333C12.5 7.8731 12.8731 7.5 13.3333 7.5C13.7936 7.5 14.1666 7.8731 14.1666 8.33333C14.1666 9.4384 13.7277 10.4982 12.9463 11.2796C12.1649 12.061 11.105 12.5 9.99998 12.5C8.89491 12.5 7.8351 12.061 7.0537 11.2796C6.2723 10.4982 5.83331 9.4384 5.83331 8.33333C5.83331 7.8731 6.20641 7.5 6.66665 7.5Z"></path>
+                        </svg>
+                      </div>
+                      <div class="button__text">Cumpără acum</div>
+                    </button>
+                    <a class="button button--empty" href="#">
+                      <div class="button__text">Află mai multe</div>
+                      <div class="button__icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.33334 10C3.33334 9.53978 3.70644 9.16669 4.16668 9.16669H15.8333C16.2936 9.16669 16.6667 9.53978 16.6667 10C16.6667 10.4603 16.2936 10.8334 15.8333 10.8334H4.16668C3.70644 10.8334 3.33334 10.4603 3.33334 10Z"></path>
+                        </svg>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M9.41073 3.57739C9.73617 3.25195 10.2638 3.25195 10.5892 3.57739L16.4226 9.41072C16.748 9.73616 16.748 10.2638 16.4226 10.5892L10.5892 16.4226C10.2638 16.748 9.73617 16.748 9.41073 16.4226C9.0853 16.0971 9.0853 15.5695 9.41073 15.2441L14.6548 9.99998L9.41073 4.7559C9.0853 4.43047 9.0853 3.90283 9.41073 3.57739Z"></path>
+                      </div>
+                    </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="shop-slide">
+              <div class="shop-slide__left">
+                <div class="shop-slide__title">Online Magazin</div>
+                <h2 class="title title--big">de produse electronice</h2>
+                <div class="label label--big">
+                  <div class="label__icon"><img src="content/images/icons/map-pin.svg" width="20" height="20"></div>
+                  <div class="label__title">în Moldova</div>
+                </div>
+              </div>
+              <div class="shop-slide__right">
+                <div class="shop-slide__img-wrap">
+                  <div class="shop-slide__back"><img class="swiper-lazy" src="content/images/pics/slide-bg.png"
+                                                     width="812" height="761"></div>
+                  <div class="shop-slide__img"><img class="swiper-lazy" src="content/images/pics/device4.png"
+                                                    width="167" height="342"></div>
+                </div>
+                <div class="shop-slide__board">
+                  <div class="shop-slide__name">Samsung Galaxy A50</div>
+                  <div class="shop-slide__table">
+                    <div class="shop-slide__table-item"><span>Display</span><span>6.1" OLED</span></div>
+                    <div class="shop-slide__table-item"><span>Refresh rate</span><span>120 Hz</span></div>
+                    <div class="shop-slide__table-item"><span>Memorie internă</span><span>128 GB</span></div>
+                    <div class="shop-slide__table-item"><span>RAM</span><span>6 GB</span></div>
+                  </div>
+                  <div class="shop-slide__buttons">
+                    <button class="button button--blue">
+                      <div class="button__icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.33335 1.16671C4.49073 0.956869 4.73772 0.833374 5.00002 0.833374H15C15.2623 0.833374 15.5093 0.956869 15.6667 1.16671L18.1667 4.50004C18.2749 4.64429 18.3334 4.81973 18.3334 5.00004V16.6667C18.3334 17.3297 18.07 17.9656 17.6011 18.4345C17.1323 18.9033 16.4964 19.1667 15.8334 19.1667H4.16669C3.50365 19.1667 2.86776 18.9033 2.39892 18.4345C1.93008 17.9656 1.66669 17.3297 1.66669 16.6667V5.00004C1.66669 4.81973 1.72517 4.64429 1.83335 4.50004L4.33335 1.16671ZM5.41669 2.50004L3.33335 5.27782V16.6667C3.33335 16.8877 3.42115 17.0997 3.57743 17.256C3.73371 17.4122 3.94567 17.5 4.16669 17.5H15.8334C16.0544 17.5 16.2663 17.4122 16.4226 17.256C16.5789 17.0997 16.6667 16.8877 16.6667 16.6667V5.27782L14.5834 2.50004H5.41669Z"></path>
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.66669 4.99996C1.66669 4.53972 2.03978 4.16663 2.50002 4.16663H17.5C17.9603 4.16663 18.3334 4.53972 18.3334 4.99996C18.3334 5.4602 17.9603 5.83329 17.5 5.83329H2.50002C2.03978 5.83329 1.66669 5.4602 1.66669 4.99996Z"></path>
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6.66665 7.5C7.12688 7.5 7.49998 7.8731 7.49998 8.33333C7.49998 8.99637 7.76337 9.63226 8.23221 10.1011C8.70105 10.5699 9.33694 10.8333 9.99998 10.8333C10.663 10.8333 11.2989 10.5699 11.7677 10.1011C12.2366 9.63226 12.5 8.99637 12.5 8.33333C12.5 7.8731 12.8731 7.5 13.3333 7.5C13.7936 7.5 14.1666 7.8731 14.1666 8.33333C14.1666 9.4384 13.7277 10.4982 12.9463 11.2796C12.1649 12.061 11.105 12.5 9.99998 12.5C8.89491 12.5 7.8351 12.061 7.0537 11.2796C6.2723 10.4982 5.83331 9.4384 5.83331 8.33333C5.83331 7.8731 6.20641 7.5 6.66665 7.5Z"></path>
+                        </svg>
+                      </div>
+                      <div class="button__text">Cumpără acum</div>
+                    </button>
+                    <a class="button button--empty" href="#">
+                      <div class="button__text">Află mai multe</div>
+                      <div class="button__icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.33334 10C3.33334 9.53978 3.70644 9.16669 4.16668 9.16669H15.8333C16.2936 9.16669 16.6667 9.53978 16.6667 10C16.6667 10.4603 16.2936 10.8334 15.8333 10.8334H4.16668C3.70644 10.8334 3.33334 10.4603 3.33334 10Z"></path>
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M9.41073 3.57739C9.73617 3.25195 10.2638 3.25195 10.5892 3.57739L16.4226 9.41072C16.748 9.73616 16.748 10.2638 16.4226 10.5892L10.5892 16.4226C10.2638 16.748 9.73617 16.748 9.41073 16.4226C9.0853 16.0971 9.0853 15.5695 9.41073 15.2441L14.6548 9.99998L9.41073 4.7559C9.0853 4.43047 9.0853 3.90283 9.41073 3.57739Z"></path>
+                        </svg>
+                      </div>
+                    </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-down">
+        <div class="scroll-down__icon"><img src="content/images/icons/mouse.svg" width="20" height="20"></div>
+        <div class="scroll-down__text">Deruleaza in jos</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--products">
+  <div class="container">
+    <div class="products-block js-dmi" data-slider="products">
+      <div class="products-block__top"><h2 class="title title--middle">Produse Recomandate</h2>
+        <div class="products-block__count-wrap">
+          <div class="products-block__count js-swiper-current">01</div>
+          <div class="products-block__count js-swiper-total"></div>
+        </div>
+      </div>
+      <div class="products-block__slider">
+        <div class="swiper-button js-next">
+          <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6.91076 4.41073C7.2362 4.0853 7.76384 4.0853 8.08928 4.41073L13.0893 9.41073C13.4147 9.73617 13.4147 10.2638 13.0893 10.5892L8.08928 15.5892C7.76384 15.9147 7.2362 15.9147 6.91076 15.5892C6.58533 15.2638 6.58533 14.7362 6.91076 14.4107L11.3215 9.99999L6.91076 5.58925C6.58533 5.26381 6.58533 4.73617 6.91076 4.41073Z"></path>
+          </svg>
+        </div>
+        <div class="swiper-button js-prev">
+          <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6.91076 4.41073C7.2362 4.0853 7.76384 4.0853 8.08928 4.41073L13.0893 9.41073C13.4147 9.73617 13.4147 10.2638 13.0893 10.5892L8.08928 15.5892C7.76384 15.9147 7.2362 15.9147 6.91076 15.5892C6.58533 15.2638 6.58533 14.7362 6.91076 14.4107L11.3215 9.99999L6.91076 5.58925C6.58533 5.26381 6.58533 4.73617 6.91076 4.41073Z"></path>
+          </svg>
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="product-item__img"><img class="swiper-lazy" src="content/images/pics/device1.png"
+                                                    width="167" height="342"></div>
+                <a class="product-item__name" href="#">Apple iPhone 12 Mini</a>
+                <div class="product-item__stats">4 ГБ/ 256 ГБ Midnight</div>
+                <div class="product-item__bottom">
+                  <div class="product-item__prices">
+                    <div class="product-item__old-price">23499 lei</div>
+                    <div class="product-item__price">21 999 lei</div>
+                  </div>
+                  <button class="button button--buy-small js-add-cart" data-id="0">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.33335 1.16671C4.49073 0.956869 4.73772 0.833374 5.00002 0.833374H15C15.2623 0.833374 15.5093 0.956869 15.6667 1.16671L18.1667 4.50004C18.2749 4.64429 18.3334 4.81973 18.3334 5.00004V16.6667C18.3334 17.3297 18.07 17.9656 17.6011 18.4345C17.1323 18.9033 16.4964 19.1667 15.8334 19.1667H4.16669C3.50365 19.1667 2.86776 18.9033 2.39892 18.4345C1.93008 17.9656 1.66669 17.3297 1.66669 16.6667V5.00004C1.66669 4.81973 1.72517 4.64429 1.83335 4.50004L4.33335 1.16671ZM5.41669 2.50004L3.33335 5.27782V16.6667C3.33335 16.8877 3.42115 17.0997 3.57743 17.256C3.73371 17.4122 3.94567 17.5 4.16669 17.5H15.8334C16.0544 17.5 16.2663 17.4122 16.4226 17.256C16.5789 17.0997 16.6667 16.8877 16.6667 16.6667V5.27782L14.5834 2.50004H5.41669Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.66669 4.99996C1.66669 4.53972 2.03978 4.16663 2.50002 4.16663H17.5C17.9603 4.16663 18.3334 4.53972 18.3334 4.99996C18.3334 5.4602 17.9603 5.83329 17.5 5.83329H2.50002C2.03978 5.83329 1.66669 5.4602 1.66669 4.99996Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.66665 7.5C7.12688 7.5 7.49998 7.8731 7.49998 8.33333C7.49998 8.99637 7.76337 9.63226 8.23221 10.1011C8.70105 10.5699 9.33694 10.8333 9.99998 10.8333C10.663 10.8333 11.2989 10.5699 11.7677 10.1011C12.2366 9.63226 12.5 8.99637 12.5 8.33333C12.5 7.8731 12.8731 7.5 13.3333 7.5C13.7936 7.5 14.1666 7.8731 14.1666 8.33333C14.1666 9.4384 13.7277 10.4982 12.9463 11.2796C12.1649 12.061 11.105 12.5 9.99998 12.5C8.89491 12.5 7.8351 12.061 7.0537 11.2796C6.2723 10.4982 5.83331 9.4384 5.83331 8.33333C5.83331 7.8731 6.20641 7.5 6.66665 7.5Z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="product-item__img"><img class="swiper-lazy" src="content/images/pics/device2.png"
+                                                    width="167" height="342"></div>
+                <a class="product-item__name" href="#">Google Pixel 4A</a>
+                <div class="product-item__stats">4 ГБ/ 256 ГБ Midnight</div>
+                <div class="product-item__bottom">
+                  <div class="product-item__prices">
+                    <div class="product-item__old-price">23499 lei</div>
+                    <div class="product-item__price">21 999 lei</div>
+                  </div>
+                  <button class="button button--buy-small js-add-cart" data-id="1">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.33335 1.16671C4.49073 0.956869 4.73772 0.833374 5.00002 0.833374H15C15.2623 0.833374 15.5093 0.956869 15.6667 1.16671L18.1667 4.50004C18.2749 4.64429 18.3334 4.81973 18.3334 5.00004V16.6667C18.3334 17.3297 18.07 17.9656 17.6011 18.4345C17.1323 18.9033 16.4964 19.1667 15.8334 19.1667H4.16669C3.50365 19.1667 2.86776 18.9033 2.39892 18.4345C1.93008 17.9656 1.66669 17.3297 1.66669 16.6667V5.00004C1.66669 4.81973 1.72517 4.64429 1.83335 4.50004L4.33335 1.16671ZM5.41669 2.50004L3.33335 5.27782V16.6667C3.33335 16.8877 3.42115 17.0997 3.57743 17.256C3.73371 17.4122 3.94567 17.5 4.16669 17.5H15.8334C16.0544 17.5 16.2663 17.4122 16.4226 17.256C16.5789 17.0997 16.6667 16.8877 16.6667 16.6667V5.27782L14.5834 2.50004H5.41669Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.66669 4.99996C1.66669 4.53972 2.03978 4.16663 2.50002 4.16663H17.5C17.9603 4.16663 18.3334 4.53972 18.3334 4.99996C18.3334 5.4602 17.9603 5.83329 17.5 5.83329H2.50002C2.03978 5.83329 1.66669 5.4602 1.66669 4.99996Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.66665 7.5C7.12688 7.5 7.49998 7.8731 7.49998 8.33333C7.49998 8.99637 7.76337 9.63226 8.23221 10.1011C8.70105 10.5699 9.33694 10.8333 9.99998 10.8333C10.663 10.8333 11.2989 10.5699 11.7677 10.1011C12.2366 9.63226 12.5 8.99637 12.5 8.33333C12.5 7.8731 12.8731 7.5 13.3333 7.5C13.7936 7.5 14.1666 7.8731 14.1666 8.33333C14.1666 9.4384 13.7277 10.4982 12.9463 11.2796C12.1649 12.061 11.105 12.5 9.99998 12.5C8.89491 12.5 7.8351 12.061 7.0537 11.2796C6.2723 10.4982 5.83331 9.4384 5.83331 8.33333C5.83331 7.8731 6.20641 7.5 6.66665 7.5Z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="product-item__img"><img class="swiper-lazy" src="content/images/pics/device3.png"
+                                                    width="167" height="342"></div>
+                <a class="product-item__name" href="#">OnePlus 8 Pro</a>
+                <div class="product-item__stats">4 ГБ/ 256 ГБ Midnight</div>
+                <div class="product-item__bottom">
+                  <div class="product-item__prices">
+                    <div class="product-item__old-price">23499 lei</div>
+                    <div class="product-item__price">21 999 lei</div>
+                  </div>
+                  <button class="button button--buy-small js-add-cart" data-id="2">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.33335 1.16671C4.49073 0.956869 4.73772 0.833374 5.00002 0.833374H15C15.2623 0.833374 15.5093 0.956869 15.6667 1.16671L18.1667 4.50004C18.2749 4.64429 18.3334 4.81973 18.3334 5.00004V16.6667C18.3334 17.3297 18.07 17.9656 17.6011 18.4345C17.1323 18.9033 16.4964 19.1667 15.8334 19.1667H4.16669C3.50365 19.1667 2.86776 18.9033 2.39892 18.4345C1.93008 17.9656 1.66669 17.3297 1.66669 16.6667V5.00004C1.66669 4.81973 1.72517 4.64429 1.83335 4.50004L4.33335 1.16671ZM5.41669 2.50004L3.33335 5.27782V16.6667C3.33335 16.8877 3.42115 17.0997 3.57743 17.256C3.73371 17.4122 3.94567 17.5 4.16669 17.5H15.8334C16.0544 17.5 16.2663 17.4122 16.4226 17.256C16.5789 17.0997 16.6667 16.8877 16.6667 16.6667V5.27782L14.5834 2.50004H5.41669Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.66669 4.99996C1.66669 4.53972 2.03978 4.16663 2.50002 4.16663H17.5C17.9603 4.16663 18.3334 4.53972 18.3334 4.99996C18.3334 5.4602 17.9603 5.83329 17.5 5.83329H2.50002C2.03978 5.83329 1.66669 5.4602 1.66669 4.99996Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.66665 7.5C7.12688 7.5 7.49998 7.8731 7.49998 8.33333C7.49998 8.99637 7.76337 9.63226 8.23221 10.1011C8.70105 10.5699 9.33694 10.8333 9.99998 10.8333C10.663 10.8333 11.2989 10.5699 11.7677 10.1011C12.2366 9.63226 12.5 8.99637 12.5 8.33333C12.5 7.8731 12.8731 7.5 13.3333 7.5C13.7936 7.5 14.1666 7.8731 14.1666 8.33333C14.1666 9.4384 13.7277 10.4982 12.9463 11.2796C12.1649 12.061 11.105 12.5 9.99998 12.5C8.89491 12.5 7.8351 12.061 7.0537 11.2796C6.2723 10.4982 5.83331 9.4384 5.83331 8.33333C5.83331 7.8731 6.20641 7.5 6.66665 7.5Z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="product-item__img"><img class="swiper-lazy" src="content/images/pics/device4.png"
+                                                    width="167" height="342"></div>
+                <a class="product-item__name" href="#">Samsung Galaxy A50</a>
+                <div class="product-item__stats">4 ГБ/ 256 ГБ Midnight</div>
+                <div class="product-item__bottom">
+                  <div class="product-item__prices">
+                    <div class="product-item__old-price">23499 lei</div>
+                    <div class="product-item__price">21 999 lei</div>
+                  </div>
+                  <button class="button button--buy-small js-add-cart" data-id="3">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.33335 1.16671C4.49073 0.956869 4.73772 0.833374 5.00002 0.833374H15C15.2623 0.833374 15.5093 0.956869 15.6667 1.16671L18.1667 4.50004C18.2749 4.64429 18.3334 4.81973 18.3334 5.00004V16.6667C18.3334 17.3297 18.07 17.9656 17.6011 18.4345C17.1323 18.9033 16.4964 19.1667 15.8334 19.1667H4.16669C3.50365 19.1667 2.86776 18.9033 2.39892 18.4345C1.93008 17.9656 1.66669 17.3297 1.66669 16.6667V5.00004C1.66669 4.81973 1.72517 4.64429 1.83335 4.50004L4.33335 1.16671ZM5.41669 2.50004L3.33335 5.27782V16.6667C3.33335 16.8877 3.42115 17.0997 3.57743 17.256C3.73371 17.4122 3.94567 17.5 4.16669 17.5H15.8334C16.0544 17.5 16.2663 17.4122 16.4226 17.256C16.5789 17.0997 16.6667 16.8877 16.6667 16.6667V5.27782L14.5834 2.50004H5.41669Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.66669 4.99996C1.66669 4.53972 2.03978 4.16663 2.50002 4.16663H17.5C17.9603 4.16663 18.3334 4.53972 18.3334 4.99996C18.3334 5.4602 17.9603 5.83329 17.5 5.83329H2.50002C2.03978 5.83329 1.66669 5.4602 1.66669 4.99996Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.66665 7.5C7.12688 7.5 7.49998 7.8731 7.49998 8.33333C7.49998 8.99637 7.76337 9.63226 8.23221 10.1011C8.70105 10.5699 9.33694 10.8333 9.99998 10.8333C10.663 10.8333 11.2989 10.5699 11.7677 10.1011C12.2366 9.63226 12.5 8.99637 12.5 8.33333C12.5 7.8731 12.8731 7.5 13.3333 7.5C13.7936 7.5 14.1666 7.8731 14.1666 8.33333C14.1666 9.4384 13.7277 10.4982 12.9463 11.2796C12.1649 12.061 11.105 12.5 9.99998 12.5C8.89491 12.5 7.8351 12.061 7.0537 11.2796C6.2723 10.4982 5.83331 9.4384 5.83331 8.33333C5.83331 7.8731 6.20641 7.5 6.66665 7.5Z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="product-item__img"><img class="swiper-lazy" src="content/images/pics/device1.png"
+                                                    width="167" height="342"></div>
+                <a class="product-item__name" href="#">Apple iPhone 12 Mini</a>
+                <div class="product-item__stats">4 ГБ/ 256 ГБ Midnight</div>
+                <div class="product-item__bottom">
+                  <div class="product-item__prices">
+                    <div class="product-item__old-price">23499 lei</div>
+                    <div class="product-item__price">21 999 lei</div>
+                  </div>
+                  <button class="button button--buy-small js-add-cart" data-id="4">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.33335 1.16671C4.49073 0.956869 4.73772 0.833374 5.00002 0.833374H15C15.2623 0.833374 15.5093 0.956869 15.6667 1.16671L18.1667 4.50004C18.2749 4.64429 18.3334 4.81973 18.3334 5.00004V16.6667C18.3334 17.3297 18.07 17.9656 17.6011 18.4345C17.1323 18.9033 16.4964 19.1667 15.8334 19.1667H4.16669C3.50365 19.1667 2.86776 18.9033 2.39892 18.4345C1.93008 17.9656 1.66669 17.3297 1.66669 16.6667V5.00004C1.66669 4.81973 1.72517 4.64429 1.83335 4.50004L4.33335 1.16671ZM5.41669 2.50004L3.33335 5.27782V16.6667C3.33335 16.8877 3.42115 17.0997 3.57743 17.256C3.73371 17.4122 3.94567 17.5 4.16669 17.5H15.8334C16.0544 17.5 16.2663 17.4122 16.4226 17.256C16.5789 17.0997 16.6667 16.8877 16.6667 16.6667V5.27782L14.5834 2.50004H5.41669Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.66669 4.99996C1.66669 4.53972 2.03978 4.16663 2.50002 4.16663H17.5C17.9603 4.16663 18.3334 4.53972 18.3334 4.99996C18.3334 5.4602 17.9603 5.83329 17.5 5.83329H2.50002C2.03978 5.83329 1.66669 5.4602 1.66669 4.99996Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.66665 7.5C7.12688 7.5 7.49998 7.8731 7.49998 8.33333C7.49998 8.99637 7.76337 9.63226 8.23221 10.1011C8.70105 10.5699 9.33694 10.8333 9.99998 10.8333C10.663 10.8333 11.2989 10.5699 11.7677 10.1011C12.2366 9.63226 12.5 8.99637 12.5 8.33333C12.5 7.8731 12.8731 7.5 13.3333 7.5C13.7936 7.5 14.1666 7.8731 14.1666 8.33333C14.1666 9.4384 13.7277 10.4982 12.9463 11.2796C12.1649 12.061 11.105 12.5 9.99998 12.5C8.89491 12.5 7.8351 12.061 7.0537 11.2796C6.2723 10.4982 5.83331 9.4384 5.83331 8.33333C5.83331 7.8731 6.20641 7.5 6.66665 7.5Z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="product-item__img"><img class="swiper-lazy" src="content/images/pics/device2.png"
+                                                    width="167" height="342"></div>
+                <a class="product-item__name" href="#">Google Pixel 4A</a>
+                <div class="product-item__stats">4 ГБ/ 256 ГБ Midnight</div>
+                <div class="product-item__bottom">
+                  <div class="product-item__prices">
+                    <div class="product-item__old-price">23499 lei</div>
+                    <div class="product-item__price">21 999 lei</div>
+                  </div>
+                  <button class="button button--buy-small js-add-cart" data-id="5">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.33335 1.16671C4.49073 0.956869 4.73772 0.833374 5.00002 0.833374H15C15.2623 0.833374 15.5093 0.956869 15.6667 1.16671L18.1667 4.50004C18.2749 4.64429 18.3334 4.81973 18.3334 5.00004V16.6667C18.3334 17.3297 18.07 17.9656 17.6011 18.4345C17.1323 18.9033 16.4964 19.1667 15.8334 19.1667H4.16669C3.50365 19.1667 2.86776 18.9033 2.39892 18.4345C1.93008 17.9656 1.66669 17.3297 1.66669 16.6667V5.00004C1.66669 4.81973 1.72517 4.64429 1.83335 4.50004L4.33335 1.16671ZM5.41669 2.50004L3.33335 5.27782V16.6667C3.33335 16.8877 3.42115 17.0997 3.57743 17.256C3.73371 17.4122 3.94567 17.5 4.16669 17.5H15.8334C16.0544 17.5 16.2663 17.4122 16.4226 17.256C16.5789 17.0997 16.6667 16.8877 16.6667 16.6667V5.27782L14.5834 2.50004H5.41669Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.66669 4.99996C1.66669 4.53972 2.03978 4.16663 2.50002 4.16663H17.5C17.9603 4.16663 18.3334 4.53972 18.3334 4.99996C18.3334 5.4602 17.9603 5.83329 17.5 5.83329H2.50002C2.03978 5.83329 1.66669 5.4602 1.66669 4.99996Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.66665 7.5C7.12688 7.5 7.49998 7.8731 7.49998 8.33333C7.49998 8.99637 7.76337 9.63226 8.23221 10.1011C8.70105 10.5699 9.33694 10.8333 9.99998 10.8333C10.663 10.8333 11.2989 10.5699 11.7677 10.1011C12.2366 9.63226 12.5 8.99637 12.5 8.33333C12.5 7.8731 12.8731 7.5 13.3333 7.5C13.7936 7.5 14.1666 7.8731 14.1666 8.33333C14.1666 9.4384 13.7277 10.4982 12.9463 11.2796C12.1649 12.061 11.105 12.5 9.99998 12.5C8.89491 12.5 7.8351 12.061 7.0537 11.2796C6.2723 10.4982 5.83331 9.4384 5.83331 8.33333C5.83331 7.8731 6.20641 7.5 6.66665 7.5Z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="product-item__img"><img class="swiper-lazy" src="content/images/pics/device3.png"
+                                                    width="167" height="342"></div>
+                <a class="product-item__name" href="#">OnePlus 8 Pro</a>
+                <div class="product-item__stats">4 ГБ/ 256 ГБ Midnight</div>
+                <div class="product-item__bottom">
+                  <div class="product-item__prices">
+                    <div class="product-item__old-price">23499 lei</div>
+                    <div class="product-item__price">21 999 lei</div>
+                  </div>
+                  <button class="button button--buy-small js-add-cart" data-id="6">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.33335 1.16671C4.49073 0.956869 4.73772 0.833374 5.00002 0.833374H15C15.2623 0.833374 15.5093 0.956869 15.6667 1.16671L18.1667 4.50004C18.2749 4.64429 18.3334 4.81973 18.3334 5.00004V16.6667C18.3334 17.3297 18.07 17.9656 17.6011 18.4345C17.1323 18.9033 16.4964 19.1667 15.8334 19.1667H4.16669C3.50365 19.1667 2.86776 18.9033 2.39892 18.4345C1.93008 17.9656 1.66669 17.3297 1.66669 16.6667V5.00004C1.66669 4.81973 1.72517 4.64429 1.83335 4.50004L4.33335 1.16671ZM5.41669 2.50004L3.33335 5.27782V16.6667C3.33335 16.8877 3.42115 17.0997 3.57743 17.256C3.73371 17.4122 3.94567 17.5 4.16669 17.5H15.8334C16.0544 17.5 16.2663 17.4122 16.4226 17.256C16.5789 17.0997 16.6667 16.8877 16.6667 16.6667V5.27782L14.5834 2.50004H5.41669Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.66669 4.99996C1.66669 4.53972 2.03978 4.16663 2.50002 4.16663H17.5C17.9603 4.16663 18.3334 4.53972 18.3334 4.99996C18.3334 5.4602 17.9603 5.83329 17.5 5.83329H2.50002C2.03978 5.83329 1.66669 5.4602 1.66669 4.99996Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.66665 7.5C7.12688 7.5 7.49998 7.8731 7.49998 8.33333C7.49998 8.99637 7.76337 9.63226 8.23221 10.1011C8.70105 10.5699 9.33694 10.8333 9.99998 10.8333C10.663 10.8333 11.2989 10.5699 11.7677 10.1011C12.2366 9.63226 12.5 8.99637 12.5 8.33333C12.5 7.8731 12.8731 7.5 13.3333 7.5C13.7936 7.5 14.1666 7.8731 14.1666 8.33333C14.1666 9.4384 13.7277 10.4982 12.9463 11.2796C12.1649 12.061 11.105 12.5 9.99998 12.5C8.89491 12.5 7.8351 12.061 7.0537 11.2796C6.2723 10.4982 5.83331 9.4384 5.83331 8.33333C5.83331 7.8731 6.20641 7.5 6.66665 7.5Z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="product-item__img"><img class="swiper-lazy" src="content/images/pics/device4.png"
+                                                    width="167" height="342"></div>
+                <a class="product-item__name" href="#">Samsung Galaxy A50</a>
+                <div class="product-item__stats">4 ГБ/ 256 ГБ Midnight</div>
+                <div class="product-item__bottom">
+                  <div class="product-item__prices">
+                    <div class="product-item__old-price">23499 lei</div>
+                    <div class="product-item__price">21 999 lei</div>
+                  </div>
+                  <button class="button button--buy-small js-add-cart" data-id="7">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.33335 1.16671C4.49073 0.956869 4.73772 0.833374 5.00002 0.833374H15C15.2623 0.833374 15.5093 0.956869 15.6667 1.16671L18.1667 4.50004C18.2749 4.64429 18.3334 4.81973 18.3334 5.00004V16.6667C18.3334 17.3297 18.07 17.9656 17.6011 18.4345C17.1323 18.9033 16.4964 19.1667 15.8334 19.1667H4.16669C3.50365 19.1667 2.86776 18.9033 2.39892 18.4345C1.93008 17.9656 1.66669 17.3297 1.66669 16.6667V5.00004C1.66669 4.81973 1.72517 4.64429 1.83335 4.50004L4.33335 1.16671ZM5.41669 2.50004L3.33335 5.27782V16.6667C3.33335 16.8877 3.42115 17.0997 3.57743 17.256C3.73371 17.4122 3.94567 17.5 4.16669 17.5H15.8334C16.0544 17.5 16.2663 17.4122 16.4226 17.256C16.5789 17.0997 16.6667 16.8877 16.6667 16.6667V5.27782L14.5834 2.50004H5.41669Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.66669 4.99996C1.66669 4.53972 2.03978 4.16663 2.50002 4.16663H17.5C17.9603 4.16663 18.3334 4.53972 18.3334 4.99996C18.3334 5.4602 17.9603 5.83329 17.5 5.83329H2.50002C2.03978 5.83329 1.66669 5.4602 1.66669 4.99996Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.66665 7.5C7.12688 7.5 7.49998 7.8731 7.49998 8.33333C7.49998 8.99637 7.76337 9.63226 8.23221 10.1011C8.70105 10.5699 9.33694 10.8333 9.99998 10.8333C10.663 10.8333 11.2989 10.5699 11.7677 10.1011C12.2366 9.63226 12.5 8.99637 12.5 8.33333C12.5 7.8731 12.8731 7.5 13.3333 7.5C13.7936 7.5 14.1666 7.8731 14.1666 8.33333C14.1666 9.4384 13.7277 10.4982 12.9463 11.2796C12.1649 12.061 11.105 12.5 9.99998 12.5C8.89491 12.5 7.8351 12.061 7.0537 11.2796C6.2723 10.4982 5.83331 9.4384 5.83331 8.33333C5.83331 7.8731 6.20641 7.5 6.66665 7.5Z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="product-item__img"><img class="swiper-lazy" src="content/images/pics/device1.png"
+                                                    width="167" height="342"></div>
+                <a class="product-item__name" href="#">Apple iPhone 12 Mini</a>
+                <div class="product-item__stats">4 ГБ/ 256 ГБ Midnight</div>
+                <div class="product-item__bottom">
+                  <div class="product-item__prices">
+                    <div class="product-item__old-price">23499 lei</div>
+                    <div class="product-item__price">21 999 lei</div>
+                  </div>
+                  <button class="button button--buy-small js-add-cart" data-id="8">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.33335 1.16671C4.49073 0.956869 4.73772 0.833374 5.00002 0.833374H15C15.2623 0.833374 15.5093 0.956869 15.6667 1.16671L18.1667 4.50004C18.2749 4.64429 18.3334 4.81973 18.3334 5.00004V16.6667C18.3334 17.3297 18.07 17.9656 17.6011 18.4345C17.1323 18.9033 16.4964 19.1667 15.8334 19.1667H4.16669C3.50365 19.1667 2.86776 18.9033 2.39892 18.4345C1.93008 17.9656 1.66669 17.3297 1.66669 16.6667V5.00004C1.66669 4.81973 1.72517 4.64429 1.83335 4.50004L4.33335 1.16671ZM5.41669 2.50004L3.33335 5.27782V16.6667C3.33335 16.8877 3.42115 17.0997 3.57743 17.256C3.73371 17.4122 3.94567 17.5 4.16669 17.5H15.8334C16.0544 17.5 16.2663 17.4122 16.4226 17.256C16.5789 17.0997 16.6667 16.8877 16.6667 16.6667V5.27782L14.5834 2.50004H5.41669Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.66669 4.99996C1.66669 4.53972 2.03978 4.16663 2.50002 4.16663H17.5C17.9603 4.16663 18.3334 4.53972 18.3334 4.99996C18.3334 5.4602 17.9603 5.83329 17.5 5.83329H2.50002C2.03978 5.83329 1.66669 5.4602 1.66669 4.99996Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.66665 7.5C7.12688 7.5 7.49998 7.8731 7.49998 8.33333C7.49998 8.99637 7.76337 9.63226 8.23221 10.1011C8.70105 10.5699 9.33694 10.8333 9.99998 10.8333C10.663 10.8333 11.2989 10.5699 11.7677 10.1011C12.2366 9.63226 12.5 8.99637 12.5 8.33333C12.5 7.8731 12.8731 7.5 13.3333 7.5C13.7936 7.5 14.1666 7.8731 14.1666 8.33333C14.1666 9.4384 13.7277 10.4982 12.9463 11.2796C12.1649 12.061 11.105 12.5 9.99998 12.5C8.89491 12.5 7.8351 12.061 7.0537 11.2796C6.2723 10.4982 5.83331 9.4384 5.83331 8.33333C5.83331 7.8731 6.20641 7.5 6.66665 7.5Z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="product-item__img"><img class="swiper-lazy" src="content/images/pics/device2.png"
+                                                    width="167" height="342"></div>
+                <a class="product-item__name" href="#">Google Pixel 4A</a>
+                <div class="product-item__stats">4 ГБ/ 256 ГБ Midnight</div>
+                <div class="product-item__bottom">
+                  <div class="product-item__prices">
+                    <div class="product-item__old-price">23499 lei</div>
+                    <div class="product-item__price">21 999 lei</div>
+                  </div>
+                  <button class="button button--buy-small js-add-cart" data-id="9">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.33335 1.16671C4.49073 0.956869 4.73772 0.833374 5.00002 0.833374H15C15.2623 0.833374 15.5093 0.956869 15.6667 1.16671L18.1667 4.50004C18.2749 4.64429 18.3334 4.81973 18.3334 5.00004V16.6667C18.3334 17.3297 18.07 17.9656 17.6011 18.4345C17.1323 18.9033 16.4964 19.1667 15.8334 19.1667H4.16669C3.50365 19.1667 2.86776 18.9033 2.39892 18.4345C1.93008 17.9656 1.66669 17.3297 1.66669 16.6667V5.00004C1.66669 4.81973 1.72517 4.64429 1.83335 4.50004L4.33335 1.16671ZM5.41669 2.50004L3.33335 5.27782V16.6667C3.33335 16.8877 3.42115 17.0997 3.57743 17.256C3.73371 17.4122 3.94567 17.5 4.16669 17.5H15.8334C16.0544 17.5 16.2663 17.4122 16.4226 17.256C16.5789 17.0997 16.6667 16.8877 16.6667 16.6667V5.27782L14.5834 2.50004H5.41669Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.66669 4.99996C1.66669 4.53972 2.03978 4.16663 2.50002 4.16663H17.5C17.9603 4.16663 18.3334 4.53972 18.3334 4.99996C18.3334 5.4602 17.9603 5.83329 17.5 5.83329H2.50002C2.03978 5.83329 1.66669 5.4602 1.66669 4.99996Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.66665 7.5C7.12688 7.5 7.49998 7.8731 7.49998 8.33333C7.49998 8.99637 7.76337 9.63226 8.23221 10.1011C8.70105 10.5699 9.33694 10.8333 9.99998 10.8333C10.663 10.8333 11.2989 10.5699 11.7677 10.1011C12.2366 9.63226 12.5 8.99637 12.5 8.33333C12.5 7.8731 12.8731 7.5 13.3333 7.5C13.7936 7.5 14.1666 7.8731 14.1666 8.33333C14.1666 9.4384 13.7277 10.4982 12.9463 11.2796C12.1649 12.061 11.105 12.5 9.99998 12.5C8.89491 12.5 7.8351 12.061 7.0537 11.2796C6.2723 10.4982 5.83331 9.4384 5.83331 8.33333C5.83331 7.8731 6.20641 7.5 6.66665 7.5Z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="product-item__img"><img class="swiper-lazy" src="content/images/pics/device3.png"
+                                                    width="167" height="342"></div>
+                <a class="product-item__name" href="#">OnePlus 8 Pro</a>
+                <div class="product-item__stats">4 ГБ/ 256 ГБ Midnight</div>
+                <div class="product-item__bottom">
+                  <div class="product-item__prices">
+                    <div class="product-item__old-price">23499 lei</div>
+                    <div class="product-item__price">21 999 lei</div>
+                  </div>
+                  <button class="button button--buy-small js-add-cart" data-id="10">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.33335 1.16671C4.49073 0.956869 4.73772 0.833374 5.00002 0.833374H15C15.2623 0.833374 15.5093 0.956869 15.6667 1.16671L18.1667 4.50004C18.2749 4.64429 18.3334 4.81973 18.3334 5.00004V16.6667C18.3334 17.3297 18.07 17.9656 17.6011 18.4345C17.1323 18.9033 16.4964 19.1667 15.8334 19.1667H4.16669C3.50365 19.1667 2.86776 18.9033 2.39892 18.4345C1.93008 17.9656 1.66669 17.3297 1.66669 16.6667V5.00004C1.66669 4.81973 1.72517 4.64429 1.83335 4.50004L4.33335 1.16671ZM5.41669 2.50004L3.33335 5.27782V16.6667C3.33335 16.8877 3.42115 17.0997 3.57743 17.256C3.73371 17.4122 3.94567 17.5 4.16669 17.5H15.8334C16.0544 17.5 16.2663 17.4122 16.4226 17.256C16.5789 17.0997 16.6667 16.8877 16.6667 16.6667V5.27782L14.5834 2.50004H5.41669Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.66669 4.99996C1.66669 4.53972 2.03978 4.16663 2.50002 4.16663H17.5C17.9603 4.16663 18.3334 4.53972 18.3334 4.99996C18.3334 5.4602 17.9603 5.83329 17.5 5.83329H2.50002C2.03978 5.83329 1.66669 5.4602 1.66669 4.99996Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.66665 7.5C7.12688 7.5 7.49998 7.8731 7.49998 8.33333C7.49998 8.99637 7.76337 9.63226 8.23221 10.1011C8.70105 10.5699 9.33694 10.8333 9.99998 10.8333C10.663 10.8333 11.2989 10.5699 11.7677 10.1011C12.2366 9.63226 12.5 8.99637 12.5 8.33333C12.5 7.8731 12.8731 7.5 13.3333 7.5C13.7936 7.5 14.1666 7.8731 14.1666 8.33333C14.1666 9.4384 13.7277 10.4982 12.9463 11.2796C12.1649 12.061 11.105 12.5 9.99998 12.5C8.89491 12.5 7.8351 12.061 7.0537 11.2796C6.2723 10.4982 5.83331 9.4384 5.83331 8.33333C5.83331 7.8731 6.20641 7.5 6.66665 7.5Z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="product-item__img"><img class="swiper-lazy" src="content/images/pics/device4.png"
+                                                    width="167" height="342"></div>
+                <a class="product-item__name" href="#">Samsung Galaxy A50</a>
+                <div class="product-item__stats">4 ГБ/ 256 ГБ Midnight</div>
+                <div class="product-item__bottom">
+                  <div class="product-item__prices">
+                    <div class="product-item__old-price">23499 lei</div>
+                    <div class="product-item__price">21 999 lei</div>
+                  </div>
+                  <button class="button button--buy-small js-add-cart" data-id="11">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.33335 1.16671C4.49073 0.956869 4.73772 0.833374 5.00002 0.833374H15C15.2623 0.833374 15.5093 0.956869 15.6667 1.16671L18.1667 4.50004C18.2749 4.64429 18.3334 4.81973 18.3334 5.00004V16.6667C18.3334 17.3297 18.07 17.9656 17.6011 18.4345C17.1323 18.9033 16.4964 19.1667 15.8334 19.1667H4.16669C3.50365 19.1667 2.86776 18.9033 2.39892 18.4345C1.93008 17.9656 1.66669 17.3297 1.66669 16.6667V5.00004C1.66669 4.81973 1.72517 4.64429 1.83335 4.50004L4.33335 1.16671ZM5.41669 2.50004L3.33335 5.27782V16.6667C3.33335 16.8877 3.42115 17.0997 3.57743 17.256C3.73371 17.4122 3.94567 17.5 4.16669 17.5H15.8334C16.0544 17.5 16.2663 17.4122 16.4226 17.256C16.5789 17.0997 16.6667 16.8877 16.6667 16.6667V5.27782L14.5834 2.50004H5.41669Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.66669 4.99996C1.66669 4.53972 2.03978 4.16663 2.50002 4.16663H17.5C17.9603 4.16663 18.3334 4.53972 18.3334 4.99996C18.3334 5.4602 17.9603 5.83329 17.5 5.83329H2.50002C2.03978 5.83329 1.66669 5.4602 1.66669 4.99996Z"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.66665 7.5C7.12688 7.5 7.49998 7.8731 7.49998 8.33333C7.49998 8.99637 7.76337 9.63226 8.23221 10.1011C8.70105 10.5699 9.33694 10.8333 9.99998 10.8333C10.663 10.8333 11.2989 10.5699 11.7677 10.1011C12.2366 9.63226 12.5 8.99637 12.5 8.33333C12.5 7.8731 12.8731 7.5 13.3333 7.5C13.7936 7.5 14.1666 7.8731 14.1666 8.33333C14.1666 9.4384 13.7277 10.4982 12.9463 11.2796C12.1649 12.061 11.105 12.5 9.99998 12.5C8.89491 12.5 7.8351 12.061 7.0537 11.2796C6.2723 10.4982 5.83331 9.4384 5.83331 8.33333C5.83331 7.8731 6.20641 7.5 6.66665 7.5Z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+<section class="section section--advantages">
+  <div class="container">
+    <div class="advantages-block">
+      <div class="advantages-item">
+        <div class="advantages-item__top">
+          <div class="advantages-item__name">Până la 2 anide garanție</div>
+          <div class="advantages-item__icon"><img src="content/images/icons/advantage1.svg" width="20" height="20">
+          </div>
+        </div>
+        <div class="advantages-item__text">Lucrul meșterului e gratuit, piesele sunt gratuite.</div>
+      </div>
+      <div class="advantages-item">
+        <div class="advantages-item__top">
+          <div class="advantages-item__name">Livrare gratuităîn Chișinău</div>
+          <div class="advantages-item__icon"><img src="content/images/icons/advantage2.svg" width="20" height="20">
+          </div>
+        </div>
+        <div class="advantages-item__text">Îți livrăm comanda oriundeîn raza Chișinăului, de la 3 ore.</div>
+      </div>
+      <div class="advantages-item">
+        <div class="advantages-item__top">
+          <div class="advantages-item__name">Cele mai bune preturi</div>
+          <div class="advantages-item__icon"><img src="content/images/icons/advantage3.svg" width="20" height="20">
+          </div>
+        </div>
+        <div class="advantages-item__text">Marfuri de la furnizori la preturi mici</div>
+      </div>
+      <div class="advantages-item">
+        <div class="advantages-item__top">
+          <div class="advantages-item__name">Calitatede neegalat</div>
+          <div class="advantages-item__icon"><img src="content/images/icons/advantage4.svg" width="20" height="20">
+          </div>
+        </div>
+        <div class="advantages-item__text">Fiecare produs este supus controlului de calitate</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--news">
+  <div class="container">
+    <div class="news-block">
+      <div class="news-block__body">
+        <div class="news-block__list-wrap">
+          <div class="news-block__list">
+            <div class="news-item"><a class="news-item__img" href="#"><img class="lazy" src="content/images/empty.gif"
+                                                                           data-src="content/images/pics/news1.jpg"
+                                                                           width="306" height="384"></a>
+              <div class="news-item__body">
+                <div class="news-item__date">24 Jul 2022</div>
+                <a class="news-item__name" href="#">Diam venenatis amet molestie vestibulum vitae id ut lacinia eu.</a>
+                <div class="news-item__text">Nunc justo, eget condimentum in pulvinar nibh. Tempus ipsum sapien sit
+                  pulvinar habitasse sagittis, consectetur.
+                </div>
+              </div>
+            </div>
+            <div class="news-item"><a class="news-item__img" href="#"><img class="lazy" src="content/images/empty.gif"
+                                                                           data-src="content/images/pics/news2.jpg"
+                                                                           width="306" height="384"></a>
+              <div class="news-item__body">
+                <div class="news-item__date">24 Jul 2022</div>
+                <a class="news-item__name" href="#">Malesuada neque, donec cursus ac vel phasellus vestibulum.</a>
+                <div class="news-item__text">Pharetra, lectus quisque sit sed fringilla dui libero. Magna eu ut feugiat
+                  vitae mauris non.
+                </div>
+              </div>
+            </div>
+            <div class="news-item"><a class="news-item__img" href="#"><img class="lazy" src="content/images/empty.gif"
+                                                                           data-src="content/images/pics/news3.jpg"
+                                                                           width="306" height="384"></a>
+              <div class="news-item__body">
+                <div class="news-item__date">24 Jul 2022</div>
+                <a class="news-item__name" href="#">Egestas pharetra, fames est adipiscing.</a>
+                <div class="news-item__text">Aliquam ultrices nisl pharetra a ac eros. Molestie leo, cras in faucibus
+                  nisl, lacus sed.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="news-block__list news-block__list--bottom">
+            <div class="news-block__fake"></div>
+            <a class="button button--empty" href="#">
+              <div class="button__text">Afișați mai multe</div>
+            </a>
+            <div class="news-block__fake"></div>
+          </div>
+        </div>
+        <div class="form-block">
+          <div class="form-block__arrow"><img class="lazy" src="content/images/empty.gif"
+                                              data-src="content/images/icons/uniq-arrow.svg" width="99" height="84">
+          </div>
+          <div class="form-block__title">Aboneaza-te la newsletter-ul nostru</div>
+          <div class="form-block__sub-title">Doar cele mai utile știri.</div>
+          <form class="form-block__form" method="post">
+            <div class="input-block"><input type="email" name="email" id="email" placeholder="E-mail" required></div>
+            <button class="button button--blue">
+              <div class="button__icon">
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M19.4226 1.07739C19.748 1.40283 19.748 1.93047 19.4226 2.2559L10.2559 11.4226C9.9305 11.748 9.40286 11.748 9.07742 11.4226C8.75198 11.0971 8.75198 10.5695 9.07742 10.2441L18.2441 1.07739C18.5695 0.751954 19.0972 0.751954 19.4226 1.07739Z"
+                        fill="white"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M19.4226 1.07741C19.649 1.30378 19.7257 1.63981 19.6199 1.94196L13.7866 18.6086C13.6737 18.9311 13.3754 19.152 13.034 19.166C12.6926 19.1799 12.3773 18.984 12.2385 18.6718L9.03534 11.4647L1.82823 8.26151C1.516 8.12274 1.32011 7.80743 1.33404 7.46603C1.34797 7.12463 1.56889 6.82633 1.89139 6.71345L18.5581 0.880121C18.8602 0.774366 19.1962 0.851049 19.4226 1.07741ZM4.42591 7.59217L10.0051 10.0718C10.1937 10.1556 10.3444 10.3064 10.4282 10.4949L12.9078 16.0741L17.475 3.02498L4.42591 7.59217Z"
+                        fill="white"></path>
+                </svg>
+              </div>
+              <div class="button__text">Abonati-va</div>
+            </button>
+          </form>
+          <div class="form-block__text">Acest site este protejat de reCAPTCHAși se aplică Politica de
+            confidențialitateși Termenii și condițiile Google.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="footer" style="background-image: url('content/images/pics/bottom-bg.png')">
+  <div class="footer__img"><img src="content/images/pics/slide-bg-footer.png" width="812" height="761"></div>
+  <div class="container">
+    <div class="footer__body">
+      <div class="footer__left"><a class="logo logo--footer">
+        <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M92.25 77.736C91.866 76.106 91.288 74.5 90.412 73.044C88.67 70.112 86.014 67.874 83.224 66.066C80.406 64.264 77.392 62.818 74.308 61.628C68.402 59.346 68.688 59.422 64.702 58C55.87 54.852 50.966 50.172 50.658 45.096C50.51 42.638 52.91 34.628 62.806 36.532C65.156 36.984 67.38 37.618 69.57 38.606C71.588 39.518 77.478 42.374 79.542 46.44C79.698 48.234 80.33 48.928 82.854 50.12C84.752 51.016 86.668 51.99 86.84 54.198C86.85 54.318 86.942 54.416 87.102 54.44C87.206 54.44 87.302 54.378 87.344 54.278C87.708 53.4 89.174 52.3 90.266 52.6C90.392 52.632 90.504 52.582 90.562 52.478C90.622 52.374 90.602 52.246 90.52 52.162L88.794 50.454C88.172 49.834 87.492 49.012 86.916 47.956C86.76 47.672 86.626 47.392 86.508 47.122C86.432 46.934 86.356 46.748 86.28 46.56C84.832 42.77 82.134 38.71 79.35 36.08C77.838 34.626 76.174 33.346 74.4 32.254C72.618 31.178 70.762 30.222 68.734 29.65L68.586 30.162C70.48 30.816 72.252 31.86 73.91 33C75.566 34.158 77.096 35.486 78.456 36.958C80.398 39.022 81.928 41.418 83.02 43.982L79.034 39.028L79.144 40.744L75.878 37.062L76.08 38.786L72.908 36.228L73.18 37.396C72.466 36.924 66.13 34.404 62.968 33.216C59.806 32.028 53.558 26.168 55.36 18.752C55.36 18.752 52.406 17.604 50.29 16.822C48.204 16.07 46.11 15.388 44.01 14.73C39.81 13.414 35.586 12.214 31.34 11.094C27.094 9.98005 22.82 8.97005 18.522 8.07805C14.222 7.19605 9.89802 6.41005 5.52202 5.97205L5.44402 6.63805C9.75002 7.30005 14 8.30405 18.218 9.40205C22.434 10.512 26.622 11.734 30.776 13.06C34.928 14.39 39.054 15.8 43.13 17.316C45.166 18.074 47.196 18.854 49.184 19.692C49.606 19.868 50.036 20.052 50.466 20.236C48.018 19.754 45.57 19.372 43.12 19.054C38.698 18.492 34.272 18.138 29.842 17.938C25.414 17.738 20.982 17.706 16.558 17.87C12.136 18.042 7.71202 18.388 3.34802 19.136L3.43402 19.744C7.79402 19.296 12.184 19.252 16.56 19.378C20.938 19.512 25.308 19.84 29.654 20.332C33.998 20.824 38.324 21.466 42.592 22.304C45.224 22.826 47.84 23.432 50.398 24.146C48.376 23.944 46.364 23.892 44.37 23.916C40.416 23.976 36.518 24.41 32.674 25.064C28.83 25.724 25.038 26.61 21.324 27.756C17.622 28.914 13.962 30.29 10.602 32.254L10.834 32.67C14.274 31.014 17.97 29.954 21.686 29.112C25.41 28.284 29.188 27.716 32.974 27.376C36.756 27.04 40.558 26.928 44.3 27.174C47.628 27.394 50.934 27.9 53.96 28.872C54.09 29.762 54.692 31.564 54.982 32.464C46.472 36.378 45.394 43.418 46.09 47.194C46.908 51.622 50.112 54.998 53.898 57.184C57.032 58.966 60.234 60.102 63.35 61.278C66.46 62.444 69.54 63.564 72.284 65.114C74.988 66.608 77.236 68.916 79.066 71.534C82.74 76.81 84.21 83.462 84.65 90.024L85.38 90.004C85.396 83.358 84.44 76.4 80.876 70.38C79.7 68.408 78.248 66.538 76.534 64.914C78.518 65.682 80.456 66.55 82.308 67.58C85.054 69.138 87.642 71.078 89.404 73.682C90.292 74.976 90.914 76.432 91.37 77.948C91.774 79.482 91.96 81.078 92.028 82.69H92.652C92.674 81.044 92.582 79.38 92.25 77.736Z"></path>
+        </svg>
+      </a>
+        <div class="footer__soc"><a class="link-soc" href="#">
+          <svg width="11" height="20" viewBox="0 0 11 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M3.96447 2.29784C4.90215 1.36016 6.17392 0.833374 7.5 0.833374H10C10.4602 0.833374 10.8333 1.20647 10.8333 1.66671V5.00004C10.8333 5.46028 10.4602 5.83337 10 5.83337L7.5 5.83337V7.50004H10C10.2566 7.50004 10.4989 7.61827 10.6568 7.82053C10.8148 8.02279 10.8707 8.28654 10.8085 8.53549L9.97512 11.8688C9.88238 12.2398 9.54906 12.5 9.16667 12.5H7.5V18.3334C7.5 18.7936 7.1269 19.1667 6.66667 19.1667H3.33333C2.8731 19.1667 2.5 18.7936 2.5 18.3334V12.5H0.833333C0.373096 12.5 0 12.1269 0 11.6667V8.33337C0 7.87314 0.373096 7.50004 0.833333 7.50004H2.5V5.83337C2.5 4.50729 3.02678 3.23552 3.96447 2.29784ZM7.5 2.50004C6.61595 2.50004 5.7681 2.85123 5.14298 3.47635C4.51786 4.10147 4.16667 4.94932 4.16667 5.83337V8.33337C4.16667 8.79361 3.79357 9.16671 3.33333 9.16671H1.66667V10.8334H3.33333C3.79357 10.8334 4.16667 11.2065 4.16667 11.6667V17.5H5.83333V11.6667C5.83333 11.2065 6.20643 10.8334 6.66667 10.8334H8.51602L8.93269 9.16671H6.66667C6.20643 9.16671 5.83333 8.79361 5.83333 8.33337V5.83337C5.83333 5.39135 6.00893 4.96742 6.32149 4.65486C6.63405 4.3423 7.05797 4.16671 7.5 4.16671H9.16667V2.50004H7.5Z"></path>
+          </svg>
+        </a><a class="link-soc" href="#">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_35_339)">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5.83331 2.50004C3.99236 2.50004 2.49998 3.99242 2.49998 5.83337V14.1667C2.49998 16.0077 3.99236 17.5 5.83331 17.5H14.1666C16.0076 17.5 17.5 16.0077 17.5 14.1667V5.83337C17.5 3.99242 16.0076 2.50004 14.1666 2.50004H5.83331ZM0.833313 5.83337C0.833313 3.07195 3.07189 0.833374 5.83331 0.833374H14.1666C16.9281 0.833374 19.1666 3.07195 19.1666 5.83337V14.1667C19.1666 16.9281 16.9281 19.1667 14.1666 19.1667H5.83331C3.07189 19.1667 0.833313 16.9281 0.833313 14.1667V5.83337Z"
+                    fill="white"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M10.4028 7.49095C9.88261 7.41382 9.35138 7.50267 8.88463 7.74485C8.41788 7.98704 8.03938 8.37024 7.80297 8.83994C7.56656 9.30964 7.48427 9.84192 7.56781 10.3611C7.65135 10.8802 7.89646 11.3599 8.26829 11.7317C8.64012 12.1035 9.11972 12.3486 9.63888 12.4322C10.158 12.5157 10.6903 12.4334 11.16 12.197C11.6297 11.9606 12.0129 11.5821 12.2551 11.1153C12.4973 10.6486 12.5861 10.1174 12.509 9.5972C12.4303 9.06663 12.1831 8.57542 11.8038 8.19615C11.4245 7.81687 10.9333 7.56963 10.4028 7.49095ZM8.11701 6.26548C8.89493 5.86184 9.78031 5.71376 10.6472 5.84231C11.5315 5.97344 12.3502 6.38551 12.9823 7.01763C13.6145 7.64976 14.0265 8.46844 14.1577 9.35273C14.2862 10.2197 14.1381 11.105 13.7345 11.883C13.3308 12.6609 12.6922 13.2917 11.9093 13.6857C11.1265 14.0797 10.2394 14.2169 9.3741 14.0777C8.50883 13.9384 7.70949 13.5299 7.08978 12.9102C6.47007 12.2905 6.06154 11.4911 5.92231 10.6259C5.78307 9.7606 5.92022 8.87345 6.31424 8.09062C6.70827 7.30779 7.3391 6.66913 8.11701 6.26548Z"
+                    fill="white"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.75 5.41671C13.75 4.95647 14.1231 4.58337 14.5833 4.58337H14.5921C15.0523 4.58337 15.4254 4.95647 15.4254 5.41671C15.4254 5.87694 15.0523 6.25004 14.5921 6.25004H14.5833C14.1231 6.25004 13.75 5.87694 13.75 5.41671Z"
+                    fill="white"></path>
+            </g>
+            <defs>
+              <clippath id="clip0_35_339">
+                <rect width="20" height="20" fill="white"></rect>
+              </clippath>
+            </defs>
+          </svg>
+        </a><a class="link-soc" href="#">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_35_350)">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M9.99987 2.5C9.99994 2.5 9.99999 2.5 9.99999 3.33333L9.99998 4.16667L9.93709 4.16676L9.75474 4.16741C9.59662 4.16815 9.36874 4.16963 9.09067 4.17261C8.5342 4.17856 7.7783 4.19046 6.97891 4.21422C6.17818 4.23801 5.34049 4.27351 4.61842 4.32618C3.87833 4.38016 3.32842 4.448 3.05445 4.52016C2.80553 4.59167 2.57964 4.72711 2.39927 4.91305C2.22333 5.09444 2.09674 5.31766 2.03133 5.56146C1.78171 6.95614 1.65964 8.37068 1.66664 9.78755L1.66669 9.7969C1.65776 11.2196 1.77891 12.6401 2.02872 14.0406C2.10091 14.272 2.22876 14.4823 2.4013 14.6531C2.58207 14.832 2.80579 14.9614 3.05097 15.0289C3.32375 15.1014 3.87518 15.1696 4.61842 15.2238C5.34049 15.2765 6.17818 15.312 6.97891 15.3358C7.7783 15.3595 8.5342 15.3714 9.09067 15.3774C9.36874 15.3804 9.59662 15.3819 9.75474 15.3826L9.93709 15.3832H10.0629L10.2452 15.3826C10.4034 15.3819 10.6312 15.3804 10.9093 15.3774C11.4658 15.3714 12.2217 15.3595 13.0211 15.3358C13.8218 15.312 14.6595 15.2765 15.3816 15.2238C16.1216 15.1698 16.6716 15.102 16.9455 15.0298C17.1944 14.9583 17.4203 14.8229 17.6007 14.6369C17.7767 14.4556 17.9032 14.2323 17.9686 13.9885C18.2163 12.6044 18.3384 11.2008 18.3333 9.79466L18.3333 9.78643C18.3423 8.35882 18.2202 6.93341 17.9687 5.52816C17.9033 5.28434 17.7767 5.06111 17.6007 4.87972C17.4224 4.6959 17.1996 4.56144 16.9541 4.48931C16.6708 4.42266 16.1188 4.36123 15.3868 4.31248C14.6633 4.2643 13.8244 4.23185 13.0232 4.21011C12.2232 4.18841 11.4668 4.17753 10.9101 4.1721C10.6318 4.16938 10.4038 4.16802 10.2456 4.16734L10.063 4.16675L9.99998 4.16667L9.99999 3.33333C9.99999 2.5 9.99994 2.5 9.99987 2.5L10.0664 2.50009L10.2527 2.50069C10.4136 2.50138 10.6447 2.50276 10.9264 2.50551C11.4894 2.51101 12.2559 2.52201 13.0684 2.54406C13.8797 2.56607 14.743 2.59924 15.4976 2.6495C16.2306 2.69832 16.9262 2.76681 17.3643 2.87379C17.3741 2.87617 17.3838 2.87874 17.3935 2.88147C17.9269 3.03238 18.4111 3.32139 18.797 3.71929C19.183 4.11719 19.4571 4.60991 19.5917 5.14766L18.7833 5.35L19.6034 5.20207C19.8767 6.71683 20.0094 8.25358 20 9.79274C20.0052 11.3089 19.8725 12.8224 19.6034 14.3145C19.6001 14.3328 19.5962 14.351 19.5917 14.369C19.4571 14.9068 19.183 15.3995 18.797 15.7974C18.4111 16.1953 17.9269 16.4843 17.3935 16.6352L17.382 16.6385C16.9373 16.7574 16.2355 16.8326 15.5028 16.8861C14.7467 16.9412 13.8823 16.9776 13.0706 17.0017C12.2575 17.0259 11.4905 17.0379 10.9271 17.044C10.6453 17.047 10.4141 17.0485 10.2531 17.0492L10.0666 17.0499L10.0001 17.05L9.93341 17.0499L9.74692 17.0492C9.58591 17.0485 9.35467 17.047 9.07284 17.044C8.50953 17.0379 7.74251 17.0259 6.9294 17.0017C6.11763 16.9776 5.25324 16.9412 4.49718 16.8861C3.76443 16.8326 3.06273 16.7573 2.61802 16.6384L2.61339 16.6371C2.09083 16.4941 1.61398 16.2188 1.22891 15.8377C0.843846 15.4566 0.563578 14.9826 0.415189 14.4616C0.407657 14.4351 0.401438 14.4083 0.396556 14.3813C0.123357 12.8667 -0.0093998 11.3301 -2.44017e-05 9.79111C-0.00728627 8.26363 0.12546 6.73869 0.39655 5.23544C0.399845 5.21717 0.403751 5.19901 0.408259 5.18099C0.542858 4.64324 0.816984 4.15053 1.20295 3.75262C1.58892 3.35472 2.07305 3.06572 2.60646 2.91481L2.618 2.91154C3.0627 2.79261 3.76443 2.71737 4.49718 2.66393C5.25324 2.60878 6.11763 2.57241 6.9294 2.54828C7.74251 2.52412 8.50953 2.51206 9.07284 2.50604C9.35467 2.50302 9.58591 2.50151 9.74692 2.50076L9.93341 2.5001L9.99987 2.5Z"
+                    fill="white"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.70597 6.34628C7.96248 6.19707 8.27899 6.19552 8.53695 6.34222L13.3286 9.06722C13.5891 9.21536 13.75 9.49195 13.75 9.79161C13.75 10.0913 13.5891 10.3679 13.3286 10.516L8.53695 13.241C8.27899 13.3877 7.96248 13.3861 7.70597 13.2369C7.44946 13.0877 7.29166 12.8134 7.29166 12.5166V7.06661C7.29166 6.76986 7.44946 6.4955 7.70597 6.34628ZM8.95832 8.49919V11.084L11.2309 9.79161L8.95832 8.49919Z"
+                    fill="white"></path>
+            </g>
+            <defs>
+              <clippath id="clip0_35_350">
+                <rect width="20" height="20" fill="white"></rect>
+              </clippath>
+            </defs>
+          </svg>
+        </a></div>
+      </div>
+      <div class="footer__menu"><a class="link link--second-white" href="#">
+        <div class="link__text">Despre noi</div>
+      </a><a class="link link--second-white" href="#">
+        <div class="link__text">Produse</div>
+      </a><a class="link link--second-white" href="#">
+        <div class="link__text">Noutati</div>
+      </a><a class="link link--second-white" href="#">
+        <div class="link__text">Contacte</div>
+      </a><a class="link link--second-white" href="#">
+        <div class="link__text">Garanție si servicii</div>
+      </a><a class="link link--second-white" href="#">
+        <div class="link__text">Politica de confidențialitate</div>
+      </a><a class="link link--second-white" href="#">
+        <div class="link__text">Protecția consumatorilor</div>
+      </a><a class="link link--second-white" href="#">
+        <div class="link__text">Cookies</div>
+      </a></div>
+      <div class="footer__right">
+        <div class="footer__copy">&copy; PC Store, 2022</div>
+        <div class="footer__payment"><img src="content/images/icons/visa.svg" width="67" height="20"><img
+          src="content/images/icons/mastercard.svg" width="33" height="20"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="scripts//vendors.js"></script>
+<script type="text/javascript" src="scripts//app.js"></script>
+</body>
+</html>
